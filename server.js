@@ -1,6 +1,11 @@
 const express = require('express')
 const app = express()
 const PORT = process.env.PORT || 5000;
+var cors = require('cors');
+
+app.use(cors({credentials:true, origin:true}));
+
+
 
 
 app.get('/', function(req, res){

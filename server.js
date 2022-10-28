@@ -1,9 +1,7 @@
 const express = require('express')
 const app = express()
 const PORT = process.env.PORT || 5000;
-var cors = require('cors');
-
-app.use(cors({credentials:true, origin:true}));
+const cors = require('cors');
 
 
 
@@ -16,3 +14,7 @@ app.get('/', function(req, res){
 app.listen(PORT, () =>{
     console.log(`Listening on port ${PORT}`)
 })
+
+app.use(cors({
+    origin: '*'
+})); 
